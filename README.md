@@ -1,4 +1,4 @@
-# Generative AI-Powered Resume Analyzer
+# Generative AI-Powered Document Analyzer
 
 This project demonstrates how to analyze and score resumes using Google Generative AI (Gemini). It includes:
 - Real-time extraction of mandatory fields (Name, Contact, University, etc.) from uploaded PDFs.
@@ -40,7 +40,7 @@ This project demonstrates how to analyze and score resumes using Google Generati
 
 1. **Clone the repo**:
    ```bash
-   git clone https://github.com/ShantamShukla/AI-Powered-Resume-Analyzer
+   git clone https://github.com/ShantamShukla/Information-extraction-using-Gen-AI
    cd ResumeAnalyzer
    ```
 2. **Setup virtual environment**:
@@ -94,8 +94,34 @@ ResumeAnalyzer/
 
 ---
 
-## Notes on Generative AI Usage
-- Detailed information on how the Gemini model is utilized for parsing and scoring resumes against job descriptions.
+## Project Overview
+
+In this project, I utilize Google's Generative AI technology, specifically the **Gemini model**, to enhance the functionality of my document analyzer. Below, I detail how the Gemini model is integrated into the system to parse Word documents and provide a nuanced analysis against job descriptions.
+
+### Gemini Model Overview
+
+The Gemini model is part of Google's suite of generative AI tools designed to understand and generate human-like text based on the input provided. In my application, Gemini is leveraged to extract key information from Word documents and to evaluate these details in the context of specific job requirements.
+
+### Parsing Word Documents
+
+The Gemini model processes text extracted from Word documents to identify and categorize essential personal and professional details. This process involves:
+
+- **Extraction of Basic Details**: The model identifies personal information such as the individual’s name, contact details, and address.
+- **Educational Background**: Gemini parses the education section to find degrees, universities, graduation dates, and fields of study.
+- **Professional Experience**: The model extracts company names, job titles, durations of employment, and descriptions of job responsibilities and achievements.
+- **Skills Identification**: Special attention is given to the skills section to catalog both technical and soft skills.
+
+### Job Description Matching
+
+Another critical application of the Gemini model is in matching the parsed document data against a provided job description:
+
+- **Keyword Matching**: The model compares keywords and phrases from the job description with the document to identify overlaps and gaps.
+- **Match Percentage Calculation**: It calculates a match percentage that reflects how closely the individual's experiences and skills align with the job requirements.
+- **Contextual Analysis**: Beyond simple keyword matching, Gemini understands the context within which terms are used, allowing for a more nuanced match that considers the depth of experience and relevance.
+
+---
+
+This Markdown formatting organizes the information into clear, structured sections with headers and lists, making it easy to read and understand. This format is ideal for incorporating into project documentation or a GitHub README file.
 
 ---
 
