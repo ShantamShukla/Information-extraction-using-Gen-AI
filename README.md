@@ -85,7 +85,7 @@ ResumeAnalyzer/
 ---
 
 ## Demo / Hosted Link
-- [Streamlit Cloud Hosted App](https://gen-ai-resume-analyz.streamlit.app/)
+- [Streamlit Cloud Hosted App](https://info-extract.streamlit.app/)
 
 ---
 
