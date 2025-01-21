@@ -1,28 +1,3 @@
-To ensure your README file reflects the capabilities and workflow of your updated Generative AI-Powered Resume Analyzer application, here are the modifications and additions you should make to the README text:
-
-### Modifications to the README File:
-
-1. **Update the Features Section**:
-   - Specify the addition of direct file upload and Google Drive options.
-   - Highlight the real-time extraction display feature in the right panel.
-   - Mention the feature to compare the resume against job descriptions and display the match percentage.
-
-2. **Adjust the Installation Instructions**:
-   - Ensure instructions cover setting up environment variables correctly, especially for the Generative AI model and Google Drive integration.
-
-3. **Enhance the Usage Section**:
-   - Detail the process of using the application, emphasizing the new user interface where uploads are done on the left and results are shown on the right.
-   - Provide guidance on how to input job descriptions and interpret match percentages.
-
-4. **Expand the Project Structure**:
-   - Verify that all files are correctly listed and described, ensuring newcomers can easily navigate the project.
-
-5. **Enhance the Screenshots Section**:
-   - Update with new screenshots that reflect the latest UI changes, showing both the input and output areas.
-
-Here’s how you can revise the README based on the guidelines above:
-
-```markdown
 # Generative AI-Powered Resume Analyzer
 
 This project demonstrates how to analyze and score resumes using Google Generative AI (Gemini). It includes:
@@ -131,4 +106,3 @@ ResumeAnalyzer/
 ---
 
 **Explore and analyze resumes efficiently and effectively with our AI-powered tool!**
-```
