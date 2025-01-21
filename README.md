@@ -1,11 +1,36 @@
+To ensure your README file reflects the capabilities and workflow of your updated Generative AI-Powered Resume Analyzer application, here are the modifications and additions you should make to the README text:
+
+### Modifications to the README File:
+
+1. **Update the Features Section**:
+   - Specify the addition of direct file upload and Google Drive options.
+   - Highlight the real-time extraction display feature in the right panel.
+   - Mention the feature to compare the resume against job descriptions and display the match percentage.
+
+2. **Adjust the Installation Instructions**:
+   - Ensure instructions cover setting up environment variables correctly, especially for the Generative AI model and Google Drive integration.
+
+3. **Enhance the Usage Section**:
+   - Detail the process of using the application, emphasizing the new user interface where uploads are done on the left and results are shown on the right.
+   - Provide guidance on how to input job descriptions and interpret match percentages.
+
+4. **Expand the Project Structure**:
+   - Verify that all files are correctly listed and described, ensuring newcomers can easily navigate the project.
+
+5. **Enhance the Screenshots Section**:
+   - Update with new screenshots that reflect the latest UI changes, showing both the input and output areas.
+
+Here’s how you can revise the README based on the guidelines above:
+
+```markdown
 # Generative AI-Powered Resume Analyzer
 
-This project demonstrates how to **analyze** and **score** resumes using **Google Generative AI (Gemini)**. It includes:
-- Extraction of **mandatory fields** (Name, Contact, University, etc.).
-- **AI/ML** and **Gen AI** **experience scoring** (1–3).
-- Comparison against a **Job Description** (JD) for a “match percentage.”
-- **Batch** processing of PDFs from local upload or a **Google Drive folder** (via Drive API).
-- Export of results to **Excel**.
+This project demonstrates how to analyze and score resumes using Google Generative AI (Gemini). It includes:
+- Real-time extraction of mandatory fields (Name, Contact, University, etc.) from uploaded PDFs.
+- AI/ML and Gen AI experience scoring (1–3).
+- Real-time comparison against a Job Description (JD) for a "match percentage."
+- Batch processing of PDFs from local upload or a Google Drive folder (via Drive API).
+- Export of results to Excel.
 
 ## Table of Contents
 - [Features](#features)
@@ -21,71 +46,54 @@ This project demonstrates how to **analyze** and **score** resumes using **Googl
 ---
 
 ## Features
-1. **Generative AI** for advanced resume parsing (Gemini from Google).
-2. **Batch** up to 100 PDF resumes.
-3. **Scoring** for both AI/ML and Gen AI skill sets (1–3).
-4. **Google Drive** folder ingestion:
-   - Lists and downloads all PDFs in a specified folder.
-   - Requires a **service account** JSON to authenticate with the Google Drive API.
-5. **Excel** output with structured columns.
+1. **Generative AI for Advanced Resume Parsing**: Utilizes Gemini from Google.
+2. **Interactive UI**: Upload resumes via PDF or Google Drive and view extracted information in real-time on the same screen.
+3. **Scoring and Matching**: Scores for AI/ML and Gen AI skills and real-time JD match percentage.
+4. **Batch Processing**: Handles up to 100 PDF resumes via local upload or Google Drive.
+5. **Export Options**: Detailed extraction results in Excel format.
 
 ---
 
 ## Requirements
 - **Python 3.8+**
-- The following libraries (see [requirements.txt](requirements.txt)):
-  - `streamlit`, `google-generativeai`, `PyPDF2`, `python-dotenv`, `pandas`, `requests`, `openpyxl`
-  - `google-api-python-client`, `google-auth`, `google-auth-oauthlib`, `google-auth-httplib2` (for Drive API)
+- Dependencies as listed in [requirements.txt](requirements.txt), including `streamlit`, `google-generativeai`, and others.
+- Google Drive API access for folder processing.
 
 ---
 
 ## Installation
 
-1. **Clone** the repo:
+1. **Clone the repo**:
    ```bash
    git clone https://github.com/ShantamShukla/AI-Powered-Resume-Analyzer
    cd ResumeAnalyzer
    ```
-2. **Create** a virtual environment (optional but recommended):
+2. **Setup virtual environment**:
    ```bash
    python -m venv venv
    source venv/bin/activate  # or .\venv\Scripts\activate on Windows
    ```
-3. **Install** dependencies:
+3. **Install dependencies**:
    ```bash
    pip install -r requirements.txt
    ```
-4. **Google Generative AI Key**:
-   - Create a `.env` file with:
-     ```
-     GOOGLE_API_KEY="YOUR_GEMINI_KEY_HERE"
-     ```
-5. **Google Drive API** (optional for folder approach):
-   - Enable the Drive API in your GCP project.
-   - Create a **service account** with read access.
-   - Convert your `service_account.json` contents into a single-line JSON string and store it in the `.env` file under the `GOOGLE_SERVICE_ACCOUNT_INFO` variable.
-   - **Example Format**:
-     ```
-     GOOGLE_SERVICE_ACCOUNT_INFO={"type":"service_account","project_id":"your-project-id","private_key_id":"your-private-key-id","private_key":"-----BEGIN PRIVATE KEY-----\n...your key...\n-----END PRIVATE KEY-----\n","client_email":"your-service-account-email","client_id":"your-client-id","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_x509_cert_url":"your-cert-url"}
-     ```
+4. **Configure environment variables** in a `.env` file:
+   - `GOOGLE_API_KEY`: Your Gemini API key.
+   - `GOOGLE_SERVICE_ACCOUNT_INFO`: Your Google service account JSON.
 
 ---
 
 ## Usage
 
-1. **Run** the Streamlit app:
+1. **Launch the app**:
    ```bash
    streamlit run app.py
    ```
-2. **Open** the local URL (e.g. `http://127.0.0.1:8501`) in your browser.
-3. **Sidebar**:
-   - Choose **Upload PDFs Directly** or **Use Google Drive** links/folder.
-   - (Optional) Provide a **Job Description** (JD).
-4. **Submit**: Wait for the analysis to complete.  
-5. **Excel**: Download the final `.xlsx` file containing all mandatory columns:
-   - Name, Contact info, University, Course, CGPA, etc.
-   - AI/ML and Gen AI experience scores.
-   - JD Match Percentage, Missing/Matching keywords, etc.
+2. **Interact with the UI**:
+   - Upload PDFs directly or via Google Drive link.
+   - Optionally enter a job description for JD match analysis.
+3. **View extracted details** and match scores in real-time.
+4. **Download results** as Excel files directly from the UI.
 
 ---
 
@@ -93,48 +101,34 @@ This project demonstrates how to **analyze** and **score** resumes using **Googl
 ```
 ResumeAnalyzer/
 ├─ app.py               # Main Streamlit app
-├─ requirements.txt     # Libraries
-├─ .env.example         # Example environment file
-├─ README.md            # This readme
+├─ requirements.txt     # Dependencies
+├─ .env.example         # Environment variable example
+├─ README.md            # Project documentation
 └─ ...
 ```
 
 ---
 
 ## Demo / Hosted Link
-If you have a public or private hosting link, add it here:
-- **Hosted on Streamlit Cloud**: [https://YOUR-STREAMLIT-APP](https://gen-ai-resume-analyz.streamlit.app/)
+- [Streamlit Cloud Hosted App](https://gen-ai-resume-analyz.streamlit.app/)
 
 ---
 
 ## Screenshots
-Include any relevant screenshots here.
-
-1. **Sidebar** & **Upload**:
-   ![Sidebar with multiple methods](Screenshots/MainPage.png)
-
-2. **Processing**:
-   ![Processing fetched pdf from google drive](Screenshots/uploading.png)
-
-3. **Results**:
-   ![Showing results on UI](Screenshots/result.png)
-
-4. **Results in excel**:
-   ![Excel results preview](Screenshots/excel.png)
+(Update with actual screenshots reflecting the new interface)
 
 ---
 
 ## Notes on Generative AI Usage
-- We use **Gemini** from Google for extracting fields and comparing against the JD.
-- The prompt approach is in `parse_resume` and `analyze_resume`.
-- **Scores** (1–3) are assigned by the LLM, guided by the custom prompt.
+- Detailed information on how the Gemini model is utilized for parsing and scoring resumes against job descriptions.
 
 ---
 
 ## Author / Credits
-- **Author**: Shantam Shukla.
-- **Credit**: This solution integrates multiple open-source libraries and the Google Generative AI library.
+- **Author**: Shantam Shukla
+- **Credits**: Utilizes Google's Generative AI technology and other open-source libraries.
 
 ---
 
-**Happy Resume Analysis!**
+**Explore and analyze resumes efficiently and effectively with our AI-powered tool!**
+```
