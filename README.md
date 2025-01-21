@@ -90,7 +90,18 @@ ResumeAnalyzer/
 ---
 
 ## Screenshots
-(Update with actual screenshots reflecting the new interface)
+1. **Sidebar** & **Upload**:
+   ![Sidebar with multiple methods](Screenshots/Landing page.png)
+
+2. **Results after uploading pdf**:
+   ![Processing fetched pdf from google drive](Screenshots/Uploading.png)
+
+3. **Results by inserting google drive link**:
+   ![Showing results on UI](Screenshots/result.png)
+
+4. **Results in excel**:
+   ![Excel results preview](Screenshots/excel.png)
+
 
 ---
 
