@@ -119,11 +119,7 @@ Another critical application of the Gemini model is in matching the parsed docum
 - **Match Percentage Calculation**: It calculates a match percentage that reflects how closely the individual's experiences and skills align with the job requirements.
 - **Contextual Analysis**: Beyond simple keyword matching, Gemini understands the context within which terms are used, allowing for a more nuanced match that considers the depth of experience and relevance.
 
----
 
-This Markdown formatting organizes the information into clear, structured sections with headers and lists, making it easy to read and understand. This format is ideal for incorporating into project documentation or a GitHub README file.
-
----
 
 ## Author / Credits
 - **Author**: Shantam Shukla
