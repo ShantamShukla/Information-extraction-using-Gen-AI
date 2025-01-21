@@ -15,7 +15,7 @@ This project demonstrates how to analyze and score resumes using Google Generati
 - [Project Structure](#project-structure)
 - [Demo / Hosted Link](#demo--hosted-link)
 - [Screenshots](#screenshots)
-- [Notes on Generative AI Usage](#notes-on-generative-ai-usage)
+- [Project Overview](#project-overview)
 - [Author / Credits](#author--credits)
 
 ---
