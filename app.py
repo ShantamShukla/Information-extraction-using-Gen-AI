@@ -12,6 +12,7 @@ import requests
 from googleapiclient.discovery import build
 from google.oauth2 import service_account
 from googleapiclient.http import MediaIoBaseDownload
+import matplotlib.pyplot as plt
 
 # Load environment variables
 load_dotenv()
@@ -227,6 +228,9 @@ def main():
                     st.error(f"Error: {str(e)}")
 
     # Right column for extracted information
+    # Original code above remains unchanged.
+
+    # Right column for extracted information
     with col2:
         st.title("📝 Extracted Information")
         st.markdown("---")
@@ -236,6 +240,34 @@ def main():
             if 'match_percentage' in st.session_state:
                 st.metric("Resume Match with Job Description", 
                          f"{st.session_state['match_percentage']}%")
+                
+                # Add the graph below
+                match_percentage = st.session_state['match_percentage']
+                remaining_percentage = 100 - match_percentage
+                
+                # Determine colors dynamically
+                if match_percentage >= 80:
+                    match_color = '#28a745'  # Green
+                elif 51 <= match_percentage <= 79:
+                    match_color = '#fd7e14'  # Orange
+                else:
+                    match_color = '#dc3545'  # Red
+
+                labels = ['Match', 'Unmatched']
+                sizes = [match_percentage, remaining_percentage]
+                colors = [match_color, '#6c757d'] 
+                explode = (0.1, 0)
+
+                # Create pie chart
+                fig, ax = plt.subplots(figsize=(2, 2))
+                ax.pie(
+                    sizes, explode=explode, labels=labels, colors=colors,
+                    autopct='%1.1f%%', startangle=90, shadow=True
+                )
+                ax.axis('equal')
+                fig.patch.set_alpha(0.0)
+                ax.patch.set_alpha(0.0)
+                st.pyplot(fig, use_container_width=False)
             
             # Create editable fields with extracted information
             edited_details = {}
